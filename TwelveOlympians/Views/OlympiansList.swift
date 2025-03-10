@@ -1,20 +1,18 @@
 //
-//  ContentView.swift
+//  OlympiansList.swift
 //  TwelveOlympians
 //
-//  Created by Nessa on 09/03/25.
+//  Created by Nessa on 11/03/25.
 //
 
 import SwiftUI
 
-struct ContentView: View {
-    
-    let items: [ItemModel] = dummyData
+struct OlympiansList: View {
     @State private var navigationPath = NavigationPath()
     
     var body: some View {
         NavigationStack(path: $navigationPath) {
-            List(items, id: \.id) { item in
+            List(olympians) { item in
                 NavigationLink(destination: ItemDetailView(item: item), label: {
                     ItemView(item: item)
                 })
@@ -52,6 +50,5 @@ enum NavDestination: Hashable {
 }
 
 #Preview {
-    ContentView()
+    OlympiansList()
 }
-

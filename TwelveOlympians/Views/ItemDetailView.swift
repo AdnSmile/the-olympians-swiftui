@@ -16,7 +16,7 @@ struct ItemDetailView: View {
             VStack(spacing: 20) {
                 Spacer()
                 
-                Image(uiImage: item.image)
+                item.image
                     .renderingMode(.original)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -60,5 +60,5 @@ struct ReadMoreButton: View {
 }
 
 #Preview {
-    ItemDetailView(item: dummyData[1])
+    ItemDetailView(item: olympians[8])
 }

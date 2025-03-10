@@ -11,7 +11,7 @@ struct ItemView: View {
     var item: ItemModel
     var body: some View {
         HStack {
-            Image(uiImage: item.image)
+            item.image
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -34,5 +34,5 @@ struct ItemView: View {
 }
 
 #Preview {
-    ItemView(item: dummyData[8])
+    ItemView(item: olympians[8])
 }
